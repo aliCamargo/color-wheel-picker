@@ -153,7 +153,7 @@ colorWheelPicker.prototype = {
         self.rgb = [p[0], p[1], p[2]]
         self.hex = "#" + ("000000" + self.rgbToHex(p[0], p[1], p[2])).slice(-6);
 
-        // console.log( coord + "<br>" + self.hex );
+        // console.logconsole.log( coord + "<br>" + self.hex );
 
 
         if(this.set_value){
@@ -169,12 +169,10 @@ colorWheelPicker.prototype = {
         this.canvas.addEventListener("touchcancel", this.handleCancel, false);
         this.canvas.addEventListener("touchleave", this.handleEnd, false);
         this.canvas.addEventListener("touchmove", this.handleMove, false);
-        // console.log("initialized.");
     },
 
     handleStart: function(e) {
         e.preventDefault();
-        // console.log("touchstart.");
         var touches = e.changedTouches;
 
         self.setColor(touches[0].clientX, touches[0].clientY);
@@ -183,7 +181,6 @@ colorWheelPicker.prototype = {
 
     handleEnd: function(e) {
         e.preventDefault();
-        // console.log("touchend.");
         var touches = e.changedTouches;
 
         self.setColor(touches[0].clientX, touches[0].clientY);
@@ -191,7 +188,6 @@ colorWheelPicker.prototype = {
 
     handleCancel: function(e) {
         e.preventDefault();
-        // console.log("touchcancel.");
         var touches = e.changedTouches;
 
         self.setColor(touches[0].clientX, touches[0].clientY);
@@ -199,7 +195,6 @@ colorWheelPicker.prototype = {
 
     handleEnd: function(e) {
         e.preventDefault();
-        // console.log("touchleave.");
         var touches = e.changedTouches;
 
         self.setColor(touches[0].clientX, touches[0].clientY);
@@ -207,7 +202,6 @@ colorWheelPicker.prototype = {
 
     handleMove: function(e) {
         e.preventDefault();
-        // console.log("touchmove.");
         var touches = e.changedTouches;
 
         self.setColor(touches[0].clientX, touches[0].clientY);
