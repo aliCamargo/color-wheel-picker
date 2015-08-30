@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>.: Color Wheel Picker :.</title>
+        <script src="js/color-wheel-picker.js"></script>
+        <script type="text/javascript">
+            window.onload = createColorWheelPicker;
+
+            function createColorWheelPicker() {
+                /*
+                new colorWheelPicker(
+                    [ -- Array of colors hex -- ],
+                    "-- id of canvas object --",
+                    -- width of container object --,
+                    -- width of center object --,
+                    "-- id of container object --",
+                    "-- id of center circle object --",
+                    "-- id of input object for set selected color --"
+                );
+                */
+
+
+                var wheelPicker = new colorWheelPicker(
+                        [
+                            "#FFDAB9", "#FF0000", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9",
+                            "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA",
+                            "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF",
+                            "#FFDAB9", "#E6E6FA", "#E0FFFF", "#FFDAB9", "#E6E6FA", "#E0FFFF",
+                        ],
+                        "canvas",
+                        400,
+                        200,
+                        "container-canvas",
+                        "center-canvas",
+                        "value-canvas"
+                );
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div id="container-canvas">
+            <img id="image-canvas" src="">
+            <canvas id="canvas"></canvas>
+            <div id="center-canvas"></div>
+        </div>
+
+        <input id="value-canvas">
+
+</body>
+</html>
